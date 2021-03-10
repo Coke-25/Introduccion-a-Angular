@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-8">
+        <h3>Añadir un nuevo libro a la lista:</h3>
+
+        <div id="zonaDatosLibro">
+            <h4>ID: <span id="valorId">{{nuevoLibro.id}}</span></h4>
+            <div *ngIf="nuevoLibro.titulo.length">
+                <h4>Título: <span id="valorTitulo">{{nuevoLibro.titulo}}</span></h4>
+            </div>
+            <div *ngIf="nuevoLibro.autor.length">
+                <h4>Autor: <span id="valorAutor">{{nuevoLibro.autor}}</span></h4>
+            </div>
+            <div *ngIf="nuevoLibro.descripcion.length">
+                <h4>Descripción: <span id="valorDescripcion">{{nuevoLibro.descripcion}}</span></h4>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-8">
+        <label for="nuevoTitulo" class="form-label">Título</label>
+        <input id="nuevoTitulo" [(ngModel)]="nuevoLibro.titulo" type="text" class="form-control" placeholder="Dale un título al libro" max="50" required>
+
+        <label for="nuevoAutor" class="form-label">Autor</label>
+        <input id="nuevoAutor" [(ngModel)]="nuevoLibro.autor" class="form-control" type="text" placeholder="Escribe quien es el autor" max="30" required>
+
+        <label for="nuevoDescripcion" class="form-label">Descripción (Opcional)</label>
+        <div class="form-floating">
+            <textarea id="nuevoDescripcion" [(ngModel)]="nuevoLibro.descripcion" class="form-control" placeholder="Añade una descripción aquí" maxlength="300"></textarea>
+            <label for="nuevoDescripcion">Añade una descripción aquí</label>
+        </div>
+
+        <button id="nuevoBotonCrear" (click)="agregarNuevo()" class="btn btn-success">Añadir</button>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div *ngIf="messageService.type=='success'">
+    <div *ngIf="messageService.messages.length">
+
+        <div class="alert alert-success" role="alert" *ngFor='let message of messageService.messages'>   
+            <div class="row">
+                <div class="col-11" id="mensaje">
+                    {{message}}
+                </div>
+                <div class="col-1">
+                    <button class="btn btn-primary align-items-right" (click)="messageService.clear()">OK</button>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<div *ngIf="messageService.type=='warning'">
+    <div *ngIf="messageService.messages.length">
+
+        <div class="alert alert-warning" role="alert" *ngFor='let message of messageService.messages'>   
+            <div class="row">
+                <div class="col-11" id="mensaje">
+                    {{message}}
+                </div>
+                <div class="col-1">
+                    <button class="btn btn-primary align-items-right" (click)="messageService.clear()">OK</button>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>

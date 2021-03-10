@@ -1,0 +1,11 @@
+#nuevoBotonCrear{
+    margin-top: 1rem;
+}
+#nuevoDescripcion{
+    height: 65px;
+}
+#zonaDatosLibro{
+    background-color: teal;
+    border-radius: 5px;
+    padding: 1px 5px;
+}
